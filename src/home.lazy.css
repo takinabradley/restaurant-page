@@ -1,0 +1,27 @@
+
+/*main content*/
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(pexels-photo-723534.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: rgb(242,243,244);
+}
+
+
+.hero, .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 75px 0 75px;
+  font-size: 1.5em;
+  width: 50%;
+  flex: 1;
+  background-color: rgba(49,49,49,.5);
+}
+
+.about {
+  align-self: flex-end;
+}
