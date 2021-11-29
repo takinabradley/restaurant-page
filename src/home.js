@@ -1,6 +1,6 @@
 export default function home() {
   const main = document.querySelector('#main');
-
+  main.innerHTML = '';
 
   const hero = document.createElement('section');
   hero.classList.add('hero');

@@ -1,6 +1,7 @@
 export default function menu() {
   const main = document.querySelector('#main');
-
+  main.innerHTML = "";
+  
 
   const menu = document.createElement('section');
   menu.classList.add('menu');
