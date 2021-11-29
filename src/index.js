@@ -14,15 +14,15 @@ const pageLoader = (function () {
   let currentStyle = 'none';
 
   function _setStyle(stylesheet) {
-    if(stylesheet !== homeStyles && stylesheet !== menuStyles && stylesheet !== contactStyles) {
-      return;
-    } else if(currentStyle === 'none') {
-      currentStyle = stylesheet;
-      currentStyle.use();
-    } else {
-      currentStyle.unuse();
-      currentStyle = stylesheet;
-      currentStyle.use();
+    if(stylesheet === homeStyles || stylesheet === menuStyles || stylesheet === contactStyles) {
+      if(currentStyle === 'none') {
+        currentStyle = stylesheet;
+        currentStyle.use();
+      } else {
+        currentStyle.unuse();
+        currentStyle = stylesheet;
+        currentStyle.use();
+      }
     }
   };
 
@@ -30,7 +30,7 @@ const pageLoader = (function () {
     page();
   }
 
-  function load(stylesheet, page) { //loads a stylesheet with page content
+  function load(stylesheet, page) { //loads a stylesheet with content in main tag
     _setStyle(stylesheet);
     _setPage(page);
   }
